@@ -32,11 +32,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach begin="1" end="100" var="idx" >
+                        <c:forEach items="${pstore.findAll()}" var="p" >
                             <tr>
-                                <td>01</td>
-                                <td>iphone</td>
-                                <td>100</td>
+                                <td>${p.codice}</td>
+                                <td>${p.descrizione}</td>
+                                <td>${p.prezzo}</td>
                             </tr>
                         </c:forEach>
                     </tbody>
@@ -49,15 +49,7 @@
                     </tfoot>
                 </table>
             </div>  
-            <div class="row verde">
-                <div class="col-sm-6">contenitore 1</div>
-                <div class="col-sm-6">contenitore 2</div>
-            </div>
-            <div class="row verde">
-                <div class="col-sm-4">contenitore 1</div>
-                <div class="col-sm-4">contenitore 2</div>
-                <div class="col-sm-4">contenitore 2</div>
-            </div>
+            
         </div>
 
     </body>
